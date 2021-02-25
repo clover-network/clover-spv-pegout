@@ -1,0 +1,16 @@
+venv/
+build/
+blocks/
+__pycache__/
+node_modules/
+.mypy_cache
+./golang/spvcli
+
+# coverage
+scTopics
+coverage/
+coverageEnv/
+coverage.json
+out
+dist/
+.nyc_output/

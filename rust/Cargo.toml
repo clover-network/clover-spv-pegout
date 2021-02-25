@@ -1,0 +1,33 @@
+[package]
+name = "bitcoin-spv"
+version = "5.0.0"
+authors = ["James Prestwich <james@prestwi.ch>"]
+edition = "2018"
+license="MIT OR Apache-2.0"
+description="Bitcoin SPV Proof evaluation"
+homepage="https://github.com/summa-tx/bitcoin-spv"
+repository="https://github.com/summa-tx/bitcoin-spv"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+primitive-types = { version = "0.7.2", default-features = false }
+ripemd160  = { version = "0.8.0", default-features = false }
+sha2  = { version = "0.8.0", default-features = false }
+
+# std
+hex = { version = "0.4.2", optional = true, default-features = false }
+serde_json = { version = "1.0", optional = true }
+serde = { version = "1.0", optional = true }
+
+[dev-dependencies]
+hex = "0.4.2"
+serde_json = { version = "1.0" }
+serde = { version = "1.0.115", features = ["derive"] }
+
+[features]
+default=["std"]
+std=["primitive-types/std", "serde", "serde/derive", "serde_json", "hex/std", "sha2/std", "ripemd160/std"]

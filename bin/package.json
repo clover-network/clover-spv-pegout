@@ -1,0 +1,35 @@
+{
+  "name": "bitcoin-spv-cli",
+  "version": "0.1.0",
+  "description": "Create Bitcoin Stateless SPV Proofs using this command line tool.",
+  "main": "cli",
+  "engines": {
+    "node": ">10.0.0"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "lint": "eslint ./cli",
+    "lint:fix": "eslint --fix ./cli",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bitcoin",
+    "verification",
+    "cryptocurrency",
+    "utilities",
+    "cli"
+  ],
+  "author": "Summa",
+  "contributors": [
+    "Mark Tyneway <mark.tyneway@gmail.com>"
+  ],
+  "license": "(MIT OR Apache-2.0)",
+  "dependencies": {
+    "@summa-tx/bitcoin-spv-js-clients": "file:../js/clients"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
